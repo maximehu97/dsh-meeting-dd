@@ -72,6 +72,6 @@ say "检查配置能否组装"
 dsh --profile "${PROFILE}" --dump-config >/dev/null
 say "安装完成。"
 echo "  1) 重启 profile ${PROFILE} 的 DSH（单独 profile 用 ${HERE}/start.sh）"
-echo "  2) DSH 网页侧栏点「约会议·钉钉」→「👥 同事」→「登录钉钉（扫码）」，用钉钉扫码、选公司、点同意"
+echo "  2) DSH 网页侧栏点「约会议·钉钉」，按页面提示扫码登录钉钉（选公司、点同意）"
 echo "     （也可以在终端运行 ${HERE}/login.sh）"
-echo "  3) 选「我是谁」，按姓名添加钉钉同事，然后对助理说「约 张三 明天下午开半小时会」"
+echo "  3) 登录后身份、示例日程和同事发现都会自动完成，然后对助理说「约 张三 明天下午开半小时会」"
