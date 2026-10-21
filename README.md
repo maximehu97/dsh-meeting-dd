@@ -1,5 +1,7 @@
 # dsh-meeting-DD：钉钉版多智能体冲突协商插件
 
+**中文** | [English](README.en.md)
+
 **基于钉钉的多智能体协商：排会、约周末团建、投票点奶茶。**
 
 局域网版 [dsh-meeting](https://github.com/maximehu97/dsh-meeting) 的钉钉版。功能一样，助理之间的通信从局域网 A2A 换成了钉钉，不用在同一个网络里，扫码登录钉钉就能用。
@@ -16,9 +18,7 @@ dsh-meeting-DD 是一个 DeepSeek Harness（dsh）插件，把这些来回沟通
 - **找代价最小的让步**：没有共同空档时，助理把能让的忙（可以线上接入、可以缩短、可以顺延）当成有代价的选项，组合出一个代价最小的方案，再去问需要让步的那几个人。
 - **本人拍板**：遇到只有本人能决定的事，助理不会替你答应，而是在你的页面弹出卡片，由你点「同意 / 不同意」。
 
-![核心演示：一场在日历上开不成的会，助理们找出代价最小的让步组合](docs/images/conflict-relax.jpg)
-
-> 上图是核心场景的演示页（陈总插会挤掉联合方案会，三个人当天一个共同空档都没有，助理找出「压缩 15 分钟 + 李经理车上线上接入 + 刘经理 1on1 顺延」的最优解）。演示页和真实运行的回放见 [Releases](https://github.com/maximehu97/dsh-meeting-dd/releases)。
+![演示：8 个人的助理通过钉钉协商，报文在组织里的助理之间飞行（场景一：上级通知；场景四：冲突重约）](docs/images/demo.gif)
 
 ## 安装
 
@@ -70,7 +70,7 @@ dsh-meeting-DD 是一个 DeepSeek Harness（dsh）插件，把这些来回沟通
 
 | 助理页：协商结果和本人卡片 | 日程页：被挤掉的会重约到周五 |
 |---|---|
-| ![](docs/images/ipad-chat.jpg) | ![](docs/images/ipad-cal.jpg) |
+| ![](docs/images/ipad-chat.png) | ![](docs/images/ipad-cal.png) |
 
 ### 2. 约周末团建、投票点奶茶
 
@@ -91,12 +91,6 @@ dsh-meeting-DD 是一个 DeepSeek Harness（dsh）插件，把这些来回沟通
 - 扫码后身份直接来自钉钉，不需要选演示人物。可以在「🧠 记住的」里改职位、部门和层级（层级决定谁对谁是上级通知、谁和谁是同级握手）。
 - 登录后自动给本组织同事打招呼，装了插件的同事几秒内出现在「👥 同事」里。新同事入职后可以点「重新发现」，也可以按姓名搜索添加。
 - 不在通讯录里的人，助理会先用 `find_colleague` 在钉钉里找；同名的会先问你选谁。
-
-### 5. 回放：看清每条报文
-
-[Releases](https://github.com/maximehu97/dsh-meeting-dd/releases) 里附了几份回放页：原始四个场景（自上而下、同级握手、自下而上、冲突重约）用 8 个 dsh 助理通过钉钉真实跑通的记录，以及带组织树和报文飞行动画的组织视图。
-
-![组织视图回放：报文在 8 个助理之间飞行](docs/images/org-replay.jpg)
 
 ## 架构
 
@@ -179,7 +173,7 @@ node scripts/build.mjs   # 打包 dist/ 下的 tgz 和独立安装包 zip（依�
 | `web/` | 助理页（横版平板样式） |
 | `kit/` | 独立安装包里的 install / login / start / stop 脚本 |
 | `install.sh` | 一条命令安装：从 GitHub 最新发布版下载安装包并运行 |
-| `docs/images/` | README 截图（用示例人物的数据渲染） |
+| `docs/images/` | README 截图和演示动图（用示例人物的数据渲染） |
 
 ## License
 
